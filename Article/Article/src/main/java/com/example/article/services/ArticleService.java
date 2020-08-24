@@ -11,7 +11,8 @@ import com.example.article.model.Article;
 public interface ArticleService {
 	public List<Article> getAllArticles();
 	public Article getArticleById(long id);
-	public void saveOrUpdate(Article article);
+	public void saveArticle(Article article);
+	public void updateArticle(Article article,long id);
 	public void deleteArticle(long id);
 
 }

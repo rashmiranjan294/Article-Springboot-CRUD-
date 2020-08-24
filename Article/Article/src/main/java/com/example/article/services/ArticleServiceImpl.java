@@ -1,6 +1,7 @@
 package com.example.article.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -29,7 +30,7 @@ public class ArticleServiceImpl implements ArticleService{
 	}
 
 	@Override
-	public void saveOrUpdate(Article article) {
+	public void saveArticle(Article article) {
 		
 		repository.save(article);
 	}
@@ -38,6 +39,12 @@ public class ArticleServiceImpl implements ArticleService{
 	public void deleteArticle(long id) {
 		repository.deleteById(id);
 		
+	}
+
+	@Override
+	public void updateArticle(Article article,long id) {
+		repository.save(article);
+		 //return ar;
 	}
 
 }
